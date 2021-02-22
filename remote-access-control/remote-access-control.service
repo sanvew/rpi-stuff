@@ -1,0 +1,13 @@
+[Unit]
+Description=Remote access switch controller
+After=network-online.target
+
+[Service]
+User=veni-sh
+Group=veni-sh
+ExecStart=/home/veni-sh/scripts/remote_access-block.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
